@@ -1,0 +1,155 @@
+body{
+	font-family: Dancing Script, cursive;
+	background-color: #02010a;
+	font-size: 20px;
+}
+
+/** slide in **/
+@-webkit-keyframes contenido-animacion {
+	0% {
+		margin-top: 150%;
+	}
+	60% {
+		margin-top: -5%;
+	}
+	100% {
+		margin-top: 0%;
+	}
+}
+
+#contenido{
+	text-align: center;
+	max-width: 900px;
+	margin: 0 auto;
+	animation-name: contenido-animacion;
+	animation-duration: 1s;
+}
+
+header{
+	background-color: #5b7989;
+	display: flex;
+	border-radius: 10px 10px 0 0;
+	color: white;
+	width: 100%;
+}
+
+header h1 {
+	width: 50%;
+	text-align: left;
+	text-shadow: 2px 2px #02010a;
+	margin-left: 10px;
+}
+
+nav {
+	width: 50%;
+	text-align: right;
+	display: block;
+	padding: 2em 1em;
+}
+
+nav a{
+	margin: 0 5px;
+	color: white;
+}
+
+nav a[href^='#']{
+	text-decoration: none;
+	color: white;
+}
+
+.pictures{
+  display: flex;
+  flex-flow: row wrap;
+  background-color: #d5c75f;
+  padding: 10px;
+}
+
+div [class*="pic"]{ flex: 1 2 30%; text-align: center; }
+
+div [class*="pic"] img{ width: 80%; box-shadow: 2px 2px #02010a; margin: 1em 0; }
+
+.pic1{
+	-webkit-filter: blur(10px);
+	filter: blur(10px);
+}
+
+.pictures div:nth-child(even){
+	-webkit-filter: grayscale(100%);
+	filter: grayscale(100%);
+}
+
+.pic3{
+	-webkit-filter: sepia(90%);
+	filter: sepia(900%);
+}
+
+footer{
+	text-align: left;
+	background-color: #C6d5c5;
+	border-radius: 0 0 10px 10px;
+	color: black;
+	display: flex;
+	padding: 15px;
+}
+
+#contactos, #terminos, #redes, #derechos{
+  	width: 25%;
+  	margin: 1px;
+}
+
+img[src*='icon']{
+	width: 18px;
+}
+
+a[href^='https']{
+	text-decoration: none;
+}
+
+.icono{
+	width: 30px;
+}
+
+/** Dispositivos móviles **/
+@media (max-width: 900px){
+	#contenido{
+		text-align: center;
+		width: 100%;
+		animation-name: contenido-animacion;
+		animation-duration: 1s;
+	}
+	div [class*="pic"]{
+  		flex: 1 2 100%;
+	}
+
+	header{
+		display: flex;
+		flex-direction: column;
+	}
+
+	header h1 {
+		text-align: center;
+		width: 100%;
+		text-shadow: 2px 2px #02010a;
+		margin: 0;
+	}
+
+	nav {
+		text-align: center;
+		width: 100%;
+		margin-top: 10px;
+		margin-bottom: 10px;
+		padding: 0;
+	}
+
+	footer{
+		text-align: left;
+		background-color: #C6d5c5;
+		display: flex;
+		flex-direction: column;
+		border-radius: 0 0 10px 10px;
+		color: black;
+	}
+
+	#contactos, #terminos, #redes, #derechos{
+	  	width: 100% !important;
+	}

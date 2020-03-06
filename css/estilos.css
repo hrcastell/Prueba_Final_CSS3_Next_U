@@ -1,0 +1,203 @@
+
+body{
+    font-family: Dancing Script, cursive;
+    background-color: #02010a;
+    font-size: 20px;
+}
+
+/**slide in**/
+@-webkit-keyframes contenido-animacion {
+    0% {
+        margin-top: 150%;
+    }
+    60% {
+        margin-top: -5%;
+    }
+    100% {
+        margin-top: 0%;
+    }
+}
+
+#contenido{
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto;
+    animation-name: contenido-animacion;
+    animation-duration: 1s;
+}
+
+header{
+    background-color: #5b7989;
+    display: flex;
+    border-radius: 10px 10px 0 0;
+    color: white;
+    width: 100%;
+}
+
+header h1 {
+    width: 50%;
+    text-align: left;
+    text-shadow: 2px 2px #02010a;
+    margin-left: 10px;
+}
+
+nav {
+    width: 50%;
+    text-align: right;
+    display: block;
+    padding: 2em 1em;
+}
+
+nav a{
+    margin: 0 5px;
+    color: white;
+}
+
+nav a[href^='#']{
+    text-decoration: none;
+    color: white;
+}
+
+section{
+    background-color: #82c3a6;
+    margin: 0 auto;
+}
+
+section img{
+    margin: 15px 0;
+    width: 70%;
+    box-shadow: 2px 2px #02010a;
+}
+
+.pictures{
+  display: flex;
+  flex-flow: row wrap;
+  background-color: #d5c75f;
+  padding: 10px;
+}
+
+div [class*="pic"]{ flex: 1 2 50%; }
+
+div [class*="pic"] { text-align: center; }
+
+div [class*="pic"] a{ color: white; text-decoration: none; }
+
+div [class*="pic"] img{ width: 80%; box-shadow: 2px 2px #02010a; }
+
+.pic1 img{
+    transition-property: transform, border, box-shadow;
+    transition-duration: 1s;
+}
+
+.pic1 img:hover{
+    transform: rotate(10deg);
+    border: 2px;
+    box-shadow: 3px 3px #82c3a6;
+}
+
+.icono{
+    width: 30px;
+}
+@-webkit-keyframes imagen2-animacion {
+    0% {
+        position: relative;
+        left: 0px;
+        bottom: 0px;
+    }
+    50% {
+        position: relative;
+        left: 5px;
+        bottom: 20px;
+        border: 2px;
+        box-shadow: 3px 3px #82c3a6;
+    }
+    100% {
+        position: relative;
+        left: 0px;
+        bottom: 0px;
+    }
+}
+
+.pic2 img:hover{
+    animation-name: imagen2-animacion;
+    animation-duration: 1.5s;
+}
+
+footer{
+    text-align: left;
+    background-color: #C6d5c5;
+    border-radius: 0 0 10px 10px;
+    color: black;
+    display: flex;
+    padding: 15px;
+}
+
+#contactos, #terminos, #redes, #derechos{
+    width: 25%;
+    margin: 1px;
+}
+
+img[src*='icon']{
+    width: 18px;
+}
+
+a[href^='https']{
+    text-decoration: none;
+}
+
+/**Dispositivos móviles**/
+@media (max-width: 900px){
+
+    #contenido{
+        text-align: center;
+        width: 100%;
+        animation-name: contenido-animacion;
+        animation-duration: 1s;
+    }
+
+    div [class*="pic"]{
+        flex: 1 2 100%;
+    }
+
+    section img{
+        width: 90%;
+        margin: 15px 0;
+    }
+
+    header{
+        display: flex;
+        flex-direction: column;
+    }
+
+    header h1 {
+        text-align: center;
+        width: 100%;
+        text-shadow: 2px 2px #02010a;
+        margin: 0;
+    }
+
+    nav {
+        text-align: center;
+        width: 100%;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        padding: 0;
+    }
+
+    footer{
+        text-align: left;
+        background-color: #C6d5c5;
+        display: flex;
+        flex-direction: column;
+        border-radius: 0 0 10px 10px;
+        color: black;
+    }
+
+    #contactos, #terminos, #redes, #derechos{
+        width: 100% !important;
+    }
+
+    .pic2{
+        margin-top: 20px;
+    }
+}
